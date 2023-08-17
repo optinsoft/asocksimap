@@ -9,6 +9,7 @@ pip install git+https://github.com/optinsoft/asocksimap.git
 ## Usage
 
 ```python
+import asyncio
 from asocksimap import AsyncSocksIMAP4_SSL
 
 def checkResponse(res, func):
