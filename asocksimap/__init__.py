@@ -27,6 +27,8 @@ import ssl
 import sys
 from aiosocks import Socks4Addr, Socks5Addr, Socks4Auth, Socks5Auth, Socks4Protocol, Socks5Protocol
 
+__version__ = "1.0.1"
+
 PY37_OR_LATER = sys.version_info[:2] >= (3, 7)
 
 def get_running_loop() -> asyncio.AbstractEventLoop:

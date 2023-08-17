@@ -1,11 +1,19 @@
 # Connect to IMAP through Socks using Python asyncio
 
+## Dependencies
+
+- aioimaplib 1.0.1+
+- aiosocks 0.2.6+
+
 ## Installation
 
 ```bash
+pip install asocksimap
+```
+or
+```bash
 pip install git+https://github.com/optinsoft/asocksimap.git
 ```
-
 ## Usage
 
 ```python
