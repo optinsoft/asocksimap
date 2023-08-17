@@ -11,6 +11,7 @@ pip install git+https://github.com/optinsoft/asocksimap.git
 ```python
 import asyncio
 from asocksimap import AsyncSocksIMAP4_SSL
+from functools import reduce
 
 def checkResponse(res, func):
     if res.result != 'OK':
