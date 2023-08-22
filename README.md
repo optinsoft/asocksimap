@@ -10,10 +10,13 @@
 ```bash
 pip install asocksimap
 ```
+
 or
+
 ```bash
 pip install git+https://github.com/optinsoft/asocksimap.git
 ```
+
 ## Usage
 
 ```python
