@@ -30,9 +30,12 @@ import logging
 import functools
 from asyncio import events, exceptions, ensure_future
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 PY37_OR_LATER = sys.version_info[:2] >= (3, 7)
+
+PROXY_TYPE_SOCKS4 = SOCKS4 = 1
+PROXY_TYPE_SOCKS5 = SOCKS5 = 2
 
 def get_running_loop() -> asyncio.AbstractEventLoop:
     if PY37_OR_LATER:
@@ -60,9 +63,6 @@ async def _cancel_and_wait(fut, loop):
         await waiter
     finally:
         fut.remove_done_callback(cb)
-
-PROXY_TYPE_SOCKS4 = SOCKS4 = 1
-PROXY_TYPE_SOCKS5 = SOCKS5 = 2
 
 class AsyncSocksIMAP4(IMAP4):
     
