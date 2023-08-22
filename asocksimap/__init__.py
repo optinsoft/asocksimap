@@ -30,7 +30,7 @@ import logging
 import functools
 from asyncio import events, exceptions, ensure_future
 
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 PY37_OR_LATER = sys.version_info[:2] >= (3, 7)
 
@@ -187,6 +187,8 @@ class AsyncSocksIMAP4(IMAP4):
                     self.timeout_handle = None
                 # call _release_waiter
                 _release_waiter(self.waiter)
+                # don't raise exception
+                return
             raise
 
     async def wait_hello_from_server(self) -> None:

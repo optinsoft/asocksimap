@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(name='asocksimap',
-    version='1.0.2',
+    version='1.0.3',
     description='Connect to IMAP through Socks using Python asyncio',
     long_description=open('README.md', "r").read(),
     long_description_content_type='text/markdown',
